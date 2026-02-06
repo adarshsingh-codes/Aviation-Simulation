@@ -1,0 +1,4 @@
+[
+  { "model": "A320", "capacity": 180 },
+  { "model": "B737", "capacity": 160 }
+]
