@@ -1,2 +1,5 @@
 const socket = io("http://localhost:3000");
-socket.on("update", flights => renderFlights(flights));
+
+socket.on("flight-update", data => {
+  console.log("Flight update:", data);
+});

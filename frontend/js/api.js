@@ -1,18 +1,6 @@
-const API = "http://localhost:3000/api";
+const BASE_URL = "http://localhost:3000";
 
-function addFlight() {
-  fetch(`${API}/flights`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: from.value,
-      to: to.value,
-      distance: Number(distance.value),
-      aircraft: aircraft.value
-    })
-  });
-}
-
-function removeFlight() {
-  fetch(`${API}/flights/${fid.value}`, { method: "DELETE" });
+export async function getFlights() {
+  const res = await fetch(`${BASE_URL}/api/flights`);
+  return res.json();
 }
