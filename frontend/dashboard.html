@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Flight Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<h2>Live Flights</h2>
-<ul id="flights"></ul>
+<header>
+  <h2>✈ Flight Operations Dashboard</h2>
+</header>
 
-<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
-<script src="js/ui.js"></script>
+<main class="grid">
+
+  <!-- Flight List -->
+  <section class="card">
+    <h3>Live Flights</h3>
+    <ul id="flightList"></ul>
+  </section>
+
+  <!-- Flight Details -->
+  <section class="card">
+    <h3>Selected Flight</h3>
+    <p><b>Fuel:</b> <span id="fuel">--</span>%</p>
+    <div class="progress">
+      <div id="fuelBar"></div>
+    </div>
+
+    <p><b>Passengers:</b> <span id="passengers">--</span></p>
+    <p><b>Weather:</b> <span id="weather">--</span></p>
+  </section>
+
+  <!-- Alerts -->
+  <section class="card warning">
+    <h3>System Alerts</h3>
+    <div id="alerts">No alerts</div>
+  </section>
+
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/api.js"></script>
 <script src="js/socket.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>

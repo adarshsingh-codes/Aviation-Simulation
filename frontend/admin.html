@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin</title>
+  <meta charset="UTF-8">
+  <title>Admin Console</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h3>Add Flight</h3>
-<input id="from" placeholder="From">
-<input id="to" placeholder="To">
-<input id="distance" placeholder="Distance">
-<input id="aircraft" placeholder="A320 / B737">
-<button onclick="addFlight()">Add</button>
+<header>
+  <h2>🧑‍✈ Admin Control Panel</h2>
+</header>
 
-<h3>Remove Flight</h3>
-<input id="fid" placeholder="Flight ID">
-<button onclick="removeFlight()">Remove</button>
+<section class="card admin">
+  <input id="flightNo" placeholder="Flight No" />
+  <input id="from" placeholder="From" />
+  <input id="to" placeholder="To" />
+  <button onclick="addFlight()">Add Flight</button>
+</section>
 
 <script src="js/api.js"></script>
 </body>
